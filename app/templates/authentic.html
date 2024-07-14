@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Authentication</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>User Authentication</h2>
+    <form id="authForm" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Authenticate">
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#authForm').submit(function(event) {
+                event.preventDefault(); // 防止表单默认提交
+
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                // 发送认证请求到后端
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/authentic',
+                    contentType: 'application/json',
+                    data: JSON.stringify({username: username, password: password}),
+                    success: function(response) {
+                        $('#message').text(response.message);
+                    },
+                    error: function(xhr, status, error) {
+                        var errorMessage = xhr.responseJSON.message;
+                        $('#message').text('Error: ' + errorMessage);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

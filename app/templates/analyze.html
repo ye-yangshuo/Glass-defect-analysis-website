@@ -1,0 +1,90 @@
+l
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Label Charts</title>
+  <style>
+    #year, #month {
+      margin: 0 10px 10px 0;
+    }
+
+    button {
+      margin: 0 10px 10px 0;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Label Charts</h1>
+    <div>
+      <label for="year">Year:</label>
+      <input type="text" id="year" v-model="year" placeholder="Enter year" />
+
+      <label for="month">Month:</label>
+      <input type="text" id="month" v-model="month" placeholder="Enter month" />
+
+      <button @click="fetchBarChart">Generate Bar Chart</button>
+      <button @click="fetchPieChart">Generate Pie Chart</button>
+    </div>
+
+    <div v-if="barChartFilename">
+      <h2>Bar Chart</h2>
+      <img :src="getImageUrl(barChartFilename)" alt="Bar Chart" />
+    </div>
+
+    <div v-if="pieChartFilename">
+      <h2>Pie Chart</h2>
+      <img :src="getImageUrl(pieChartFilename)" alt="Pie Chart" />
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          year: '',
+          month: '',
+          barChartFilename: null,
+          pieChartFilename: null
+        };
+      },
+      methods: {
+        async fetchBarChart() {
+          try {
+            const response = await axios.get('http://127.0.0.1:5000/api/labels/bar_chart', {
+              params: {
+                year: this.year,
+                month: this.month
+              }
+            });
+            this.barChartFilename = response.data.filename;
+          } catch (error) {
+            console.error('Error fetching bar chart:', error);
+          }
+        },
+        async fetchPieChart() {
+          try {
+            const response = await axios.get('http://127.0.0.1:5000/api/labels/pie_chart', {
+              params: {
+                year: this.year,
+                month: this.month
+              }
+            });
+            this.pieChartFilename = response.data.filename;
+          } catch (error) {
+            console.error('Error fetching pie chart:', error);
+          }
+        },
+        getImageUrl(filename) {
+          return `http://127.0.0.1:5000/api/labels/show_image/${filename}`;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

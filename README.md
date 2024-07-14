@@ -63,11 +63,11 @@
 6.在ImageView\.vue，DataAnalyze.vue中修改：
 
 具体路径：\
-![](README_md_files/32d99780-41bd-11ef-96dd-83d6321fcfd1_20240714164353.jpeg?v=1\&type=image\&token=V1%3A5ny-_my9BM7mQLBH_aRpXVC0VZqHXEyPmBZlSsRSMyk)
+![image](README_imgs/32d99780-41bd-11ef-96dd-83d6321fcfd1_20240714164353.jpeg?v=1\&type=image\&token=V1%3A5ny-_my9BM7mQLBH_aRpXVC0VZqHXEyPmBZlSsRSMyk)
 
 修改内容Baseurl：将基地址修改为刚刚在第3步你自己设置的ip与端口
 
-![](README_md_files/62ae9e10-41bd-11ef-96dd-83d6321fcfd1_20240714164513.jpeg?v=1\&type=image\&token=V1%3At60FC0YZKFn_69dY4x9jJqn_LUEseHETeBNvGvEr76c)
+![image](README_imgs/62ae9e10-41bd-11ef-96dd-83d6321fcfd1_20240714164513.jpeg?v=1\&type=image\&token=V1%3At60FC0YZKFn_69dY4x9jJqn_LUEseHETeBNvGvEr76c)
 
 7.在glass\_vue路径下，运行命令：
 

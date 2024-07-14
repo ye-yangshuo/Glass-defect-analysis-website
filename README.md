@@ -89,7 +89,7 @@
 
 这是本项目的外部结构，由三大部分与一些小文件组成：
 
-![](<README (1)_md_files/c2daf990-41c8-11ef-be91-bb7ecf96b99b_20240714180639.jpeg?v=1\&type=image\&token=V1%3AH25zFylff9p6VzLWt21gZuzkcWAWdG6nacgF9m9D-r4>)
+![](<README_imgs/c2daf990-41c8-11ef-be91-bb7ecf96b99b_20240714180639.jpeg?v=1\&type=image\&token=V1%3AH25zFylff9p6VzLWt21gZuzkcWAWdG6nacgF9m9D-r4>)
 
 *   app:放置了所有的后端代码（出来启动文件）
 
@@ -115,7 +115,7 @@
 
 进入app文件夹，也就是进入了后端区域：
 
-![](<README (1)_md_files/cf460840-41c9-11ef-be91-bb7ecf96b99b_20240714181409.jpeg?v=1\&type=image\&token=V1%3AXinU004QTswO9BAULssY7AfKgjYcBpsLD2MoNfIZlEE>)
+![](<README_imgs/cf460840-41c9-11ef-be91-bb7ecf96b99b_20240714181409.jpeg?v=1\&type=image\&token=V1%3AXinU004QTswO9BAULssY7AfKgjYcBpsLD2MoNfIZlEE>)
 
 *   pycache：不用管，应该是运行时的缓存
 
@@ -149,7 +149,7 @@ run.py运行后端——run.py进入init.py初始化routes——后端等待前�
 
 进入glass\_vue文件夹，使用vue\_cli脚手架搭建基本的vue结构后，进入src文件夹中：
 
-![](<README (1)_md_files/e5698bf0-41cf-11ef-be91-bb7ecf96b99b_20240714185744.jpeg?v=1\&type=image\&token=V1%3AwapbqXvlHoT08Q0mqtf5f8mYuJRSPT1Dmeegs8G6oII>)
+![](<README_imgs/e5698bf0-41cf-11ef-be91-bb7ecf96b99b_20240714185744.jpeg?v=1\&type=image\&token=V1%3AwapbqXvlHoT08Q0mqtf5f8mYuJRSPT1Dmeegs8G6oII>)
 
 *   assets：我在搭建时没有使用到
 

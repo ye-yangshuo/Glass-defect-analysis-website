@@ -69,15 +69,15 @@
 
 ![image](README_imgs/62ae9e10-41bd-11ef-96dd-83d6321fcfd1_20240714164513.jpeg?v=1\&type=image\&token=V1%3At60FC0YZKFn_69dY4x9jJqn_LUEseHETeBNvGvEr76c)
 
-7.在glass\_vue路径下，运行命令：
+7.在axios.js中修改自己设置的ip与端口：
+
+![image](README_imgs/e9f03830-4261-11ef-b233-03b40ca9e964.jpeg?v=1\&type=image)
+
+8.在glass\_vue路径下，运行命令：
 
     npm run serve         #运行前端部分
 
-8.运行run.py文件（运行后端部分）
-
-
-
-
+9.运行run.py文件（运行后端部分）
 
 ## 三、目录结构解答
 
@@ -89,7 +89,7 @@
 
 这是本项目的外部结构，由三大部分与一些小文件组成：
 
-![](<README_imgs/c2daf990-41c8-11ef-be91-bb7ecf96b99b_20240714180639.jpeg?v=1\&type=image\&token=V1%3AH25zFylff9p6VzLWt21gZuzkcWAWdG6nacgF9m9D-r4>)
+![](README_imgs/c2daf990-41c8-11ef-be91-bb7ecf96b99b_20240714180639.jpeg?v=1\&type=image\&token=V1%3AH25zFylff9p6VzLWt21gZuzkcWAWdG6nacgF9m9D-r4)
 
 *   app:放置了所有的后端代码（出来启动文件）
 
@@ -111,11 +111,9 @@
 
 2.与数据库的联系。
 
-
-
 进入app文件夹，也就是进入了后端区域：
 
-![](<README_imgs/cf460840-41c9-11ef-be91-bb7ecf96b99b_20240714181409.jpeg?v=1\&type=image\&token=V1%3AXinU004QTswO9BAULssY7AfKgjYcBpsLD2MoNfIZlEE>)
+![](README_imgs/cf460840-41c9-11ef-be91-bb7ecf96b99b_20240714181409.jpeg?v=1\&type=image\&token=V1%3AXinU004QTswO9BAULssY7AfKgjYcBpsLD2MoNfIZlEE)
 
 *   pycache：不用管，应该是运行时的缓存
 
@@ -133,8 +131,6 @@
 
 run.py运行后端——run.py进入init.py初始化routes——后端等待前端调用api——前端请求使用后端的某个api——后端通过routes进入对应的service——service处理请求——返回相应
 
-
-
 ### 3.前端结构：
 
 前端主要功能：
@@ -149,7 +145,7 @@ run.py运行后端——run.py进入init.py初始化routes——后端等待前�
 
 进入glass\_vue文件夹，使用vue\_cli脚手架搭建基本的vue结构后，进入src文件夹中：
 
-![](<README_imgs/e5698bf0-41cf-11ef-be91-bb7ecf96b99b_20240714185744.jpeg?v=1\&type=image\&token=V1%3AwapbqXvlHoT08Q0mqtf5f8mYuJRSPT1Dmeegs8G6oII>)
+![](README_imgs/e5698bf0-41cf-11ef-be91-bb7ecf96b99b_20240714185744.jpeg?v=1\&type=image\&token=V1%3AwapbqXvlHoT08Q0mqtf5f8mYuJRSPT1Dmeegs8G6oII)
 
 *   assets：我在搭建时没有使用到
 
@@ -168,10 +164,3 @@ run.py运行后端——run.py进入init.py初始化routes——后端等待前�
 *   main.js：前端启动文件
 
 vue前端主要就是对组件的编写以及定义对应的路由，最后通过组件组合成一个个展示出来的页面，而每个页面使用组件时只要通过定义好的路由即可直接调用，而不需要在页面中再写一份组件代码，提高了组件的利用率。
-
-
-
-
-
-
-

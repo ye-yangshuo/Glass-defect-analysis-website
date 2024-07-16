@@ -143,7 +143,7 @@ run.py运行后端——run.py进入init.py初始化routes——后端等待前�
 
 前端我使用vue进行搭建，vue最大的特点我认为就是组件化。
 
-进入glass\_vue文件夹，使用vue\_cli脚手架搭建基本的vue结构后，进入src文件夹中：
+进入glass\_vue文件夹，使用vue\_cli脚手架(npm install -g @vue/cli)搭建基本的vue结构(vue create my-vue-app)，进入src文件夹中：
 
 ![](README_imgs/e5698bf0-41cf-11ef-be91-bb7ecf96b99b_20240714185744.jpeg?v=1\&type=image\&token=V1%3AwapbqXvlHoT08Q0mqtf5f8mYuJRSPT1Dmeegs8G6oII)
 
@@ -164,3 +164,4 @@ run.py运行后端——run.py进入init.py初始化routes——后端等待前�
 *   main.js：前端启动文件
 
 vue前端主要就是对组件的编写以及定义对应的路由，最后通过组件组合成一个个展示出来的页面，而每个页面使用组件时只要通过定义好的路由即可直接调用，而不需要在页面中再写一份组件代码，提高了组件的利用率。
+
